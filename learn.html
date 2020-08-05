@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    p{
+        color: black;
+        padding: 5px;
+        height: 20px;
+        border-radius: 5px;
+        margin: 5px;
+    }
+    .mobile-1{
+        background-color: rgb(11, 59, 80);
+        width: 300px;
+        height: 500px;
+        position: fixed;
+        margin-bottom: 20px;
+        border-top-left-radius: 10px;
+        border-top-right-radius: 10px;
+        overflow-y: scroll;
+        overflow-x: hidden;
+    }
+    
+    .mobile-2{
+        background-color: rgb(11, 59, 80);
+        position: fixed;
+        width: 300px;
+        height: 500px;
+        margin-left: 400px;
+        border-top-left-radius: 10px;
+        border-top-right-radius: 10px;
+        overflow-y: scroll;
+        overflow-x: hidden;
+    }
+    input{
+        width: 75%;
+        border: none;
+        border-radius: 3px;
+        height: 30px;
+        background-color: rgba(27, 27, 27, 0.761);
+        color: white;
+    }
+    button{
+        background-color: darkgreen;
+        border: none;
+        width: 20%;
+        height: 30px;
+        border-radius: 3px;
+        color: white;
+        font-size: large;
+        cursor: pointer;
+    }
+    .btn1{
+        position: fixed;
+        top: 508px;
+        border-top: solid black 2px;
+        padding: 10px;
+        width: 280px;
+        background-color: black;
+    }
+    .btn2{
+        position: fixed;
+        top: 508px;
+        border-top: solid black 2px;
+        padding: 10px;
+        width: 280px;
+        background-color: black;
+    }
+    .message{
+        width: 200px;
+        padding: 5px;
+    }
+    .sent{
+        margin-left: 9vh;
+    }
+    .receive{
+        margin-right: 9vh;
+    }
+    .sent-2{
+         margin-left: 9vh;
+    }
+    .receive-2{
+        margin-right: 9vh;
+    }
+    .bar{
+        width: 86.5%;
+        background-color: black;
+        padding: 20px;
+        border-top-left-radius: 10px;
+        border-top-right-radius: 10px;
+    }
+</style>
+<body>
+    <div class="mobile-1">
+        <div class="bar">
+        </div>
+        <div class="message1">
+        </div>
+        <div class="btn1">
+            <input type="text" id="text-1">
+            <button class="btn-1" onclick="message1()">Send</button>
+        </div>
+    </div>
+
+    <div class="mobile-2">
+        <div class="bar"></div>
+        <div class="message2">
+        </div>
+        <div class="btn2">
+            <input type="text" id="text-2">
+            <button class="btn-2" onclick="message2()">Send</button>
+        </div>
+    </div>
+
+    <script>
+
+        function message1 (){
+            var sms1 = document.querySelector('#text-1').value;
+            
+
+            var newSms1 = document.createElement('p');
+            var newSms2 = document.createElement('p');
+            var message1 = document.querySelector('.message1');
+            var message2 = document.querySelector('.message2');
+            
+            newSms2.innerHTML = sms1;
+            newSms1.innerHTML = sms1;
+            
+            newSms2.setAttribute('style', "background: dimgrey; width: 40%; margin-left: 10px;");
+            newSms1.setAttribute('style', "background: green; width: 40%; margin-left: 150px;")
+
+                if (sms1 == ""){
+                    message1.appendChild('')
+                    message2.appendChild('')
+                }
+                else{
+                    message1.appendChild(newSms1);
+                    message2.appendChild(newSms2);   
+                }
+            
+            console.log(newSms2)
+            // The insert Before Method
+            
+
+        }
+        
+
+        function message2 (){
+            var sms2 = document.querySelector('#text-2').value;
+
+            var newSms1 = document.createElement('p');
+            var newSms2 = document.createElement('p');
+            
+            var message1 = document.querySelector('.message1');
+            var message2 = document.querySelector('.message2');
+            
+            newSms1.innerHTML = sms2;
+            newSms2.innerHTML = sms2;
+            
+            newSms1.setAttribute('style', "background: dimgrey; width: 40%; margin-left: 10px;");
+            newSms2.setAttribute('style', "background: green; width: 40%; margin-left: 150px;");
+
+                if (sms2 == ""){
+                    message1.appendChild('');
+                    message2.appendChild('');
+                }
+                else{
+                    message1.appendChild(newSms1);
+                    message2.appendChild(newSms2);
+                }
+            
+            console.log(newSms2)
+           
+        }
+    </script>
+</body>
+</html>

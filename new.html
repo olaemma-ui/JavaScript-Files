@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="fontawesome-free-5.12.1-web/css/all.min.css">
+    <script src="NEW.JS"></script>
+</head>
+<style>
+    .form input{
+        width: 50px;
+        height: 30px;
+        font-size: larger;
+        font-weight: bolder;
+        cursor: pointer;
+    }
+    .form{
+        margin-top: 10px;
+        width: 250px;
+    }
+    .fas {
+        cursor: pointer;
+        border: none;
+        background-color: transparent;
+    }
+</style>
+<body>
+    <input type="password" id="input"> 
+    <button id="click" onclick="valid()">Click Me</button> <b id="id"></b><br> <br>
+    
+
+    <input type="text" id="psw" placeholder="Password">
+    <button onclick="pass()">See Password</button> <br> <br>
+
+    <input type="checkbox" onclick="price(1200)">1200
+    <button onclick="price(3200)">3200</button>
+    <button onclick="price(4000)">4000</button>
+    <button onclick="price(8000)">8000</button>
+    <button onclick="total()">answer</button>
+
+    <p id="demo"></p>
+    <p id="sum"></p>
+        <img src="IMG_5113.PNG" width="50%" style="display: block;" alt="">
+    <button class="fas fa-thumbs-up fa-2x" onclick="like()" style="color: rgb(3, 3, 151);"></button> <strong id="num">0 people liked your post</strong>
+    <small id="people"></small>  
+    <button class="fas fa-thumbs-up fa-2x" onclick="disLike()" style="color: rgb(167, 14, 14); transform: rotate(180deg);"></button>
+
+        <div class="form">
+            <input name="" id="screen" style="width: 205px; height: 30px;"> <br> <br>
+            <input type="button" onclick="clean()" value="C" style="float: right; margin-right: 38px;">  <br> <br>
+            <input type="button" onclick="insert(1)" value="1"> 
+            <input type="button" onclick="insert(2)" value="2"> 
+            <input type="button" onclick="insert(3)" value="3"> 
+            <input type="button" onclick="insert('.')" value=".">   <br> <br>
+            <input type="button" onclick="insert(4)" value="4">
+            <input type="button" onclick="insert(5)" value="5">
+            <input type="button" onclick="insert(6)" value="6">
+            <input type="button" onclick="insert(7)" value="7"> <br> <br>
+            <input type="button" onclick="insert(8)" value="8">
+            <input type="button" onclick="insert(9)" value="9">
+            <input type="button" onclick="insert(0)" value="0">
+            <input type="button" onclick="insert('*')" value="*"> <br> <br>
+            <input type="button" onclick="insert('-')" value="-">
+            <input type="button" onclick="insert('+')" value="+">
+            <input type="button" onclick="insert('/')" value="/"> 
+            <input type="button" onclick="equal()" value="="> 
+        </div>
+    <script>
+        function insert (p) {
+            var x = document.getElementById('screen');
+            x.value = x.value + p;
+            x.style.fontSize = "x-large";
+        }
+        function equal () {
+            var x = document.getElementById('screen').value;
+            if (x) {
+                document.getElementById('screen').value = eval(x);
+            }
+        }
+        function clean() {
+            var x = document.getElementById("screen");
+            x.value = "";
+        }
+
+    </script>
+</body>
+</html>

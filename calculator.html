@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .form{
+            width: 180px;
+            background-color: black;
+            padding: 10px;
+            border-radius: 10px;
+            /* transform: translateX(60px) translateY(100px); */
+            position: relative;
+            top: 20vh;
+            left: 20vw;
+        }
+        input{
+            width: 40px;
+            height: 30px;
+            font-size: larger;
+            font-weight: bolder;
+            cursor: pointer;
+            margin-top: 10px;
+            padding: 2px;
+            border: none;
+            color: white;
+        }
+        #btn{
+            margin-top: 10px;
+        }
+        .btn{
+            margin-left: 2.5px;
+        }
+        #screen::placeholder{
+            color: black;
+            font: xx-large;
+        }
+        textarea{
+            font-size: xx-large;
+        }
+    </style>
+</head>
+<body>
+    <div class="form">
+        <textarea name="" id="screen" style="width: 170px; height: 40px;" placeholder="0"></textarea>
+        <br>
+        <div class="btn">
+            <input id="btn" type="button" style="background-color: orangered; color: black;" onclick="clean()" value="C">
+            <input type="button" value="%" style="background-color: orange; color: black;" onclick="insert('%')">
+            <input type="button" value="*" style="background-color: orange; color: black;" onclick="insert('*')">
+            <input type="button" value="/" style="background-color: orange; color: black;" onclick="insert('/')">
+            <br>
+            <input type="button" value="1" style="background-color: rgb(54, 54, 54);" onclick="insert(1)">
+            <input type="button" value="2" style="background-color: rgb(54, 54, 54);" onclick="insert(2)">
+            <input type="button" value="3" style="background-color: rgb(54, 54, 54);" onclick="insert(3)">
+            <input type="button" value="+" style="background-color: orange; color: black;" onclick="insert('+')">
+            <br>
+            <input type="button" value="4" style="background-color: rgb(54, 54, 54);" onclick="insert(4)">
+            <input type="button" value="5" style="background-color: rgb(54, 54, 54);" onclick="insert(5)">
+            <input type="button" value="6" style="background-color: rgb(54, 54, 54);" style="background-color: rgb(54, 54, 54);" onclick="insert(6)">
+            <input type="button" value="-" style="background-color: orange; color: black;" onclick="insert('-')">
+            <br> 
+            <input type="button" value="7" style="background-color: rgb(54, 54, 54);" onclick="insert(7)">
+            <input type="button" value="8" style="background-color: rgb(54, 54, 54);" onclick="insert(8)">
+            <input type="button" value="9" style="background-color: rgb(54, 54, 54);" onclick="insert(9)">
+            <input type="button" value="x/%" style="font-size: medium; background-color: orange; color: black;" onclick="percent()">
+
+            <input type="button" value="0" style="background-color: rgb(54, 54, 54);" onclick="insert(0)">
+            <input type="button" onclick="insert('.')" style="background-color: rgb(54, 54, 54);" value="."> 
+            <input type="button" value="=" onclick="equal('=')" style="margin-left: 0px; width: 85px; font-size: large; background-color: olivedrab">
+            <button style="width: 98%; margin-top: 10px; background-color: rgba(0, 0, 0, 0.625); color: white; border: none;"> Ola's First Js project</button>
+        </div>
+    </div>
+
+    <script src="calculator.js"></script>
+</body>
+</html>

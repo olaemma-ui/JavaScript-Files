@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    .card{
+        width: 400px;
+        height: 300px;
+        background-color: cadetblue;
+        padding: 10px;
+        border-radius: 5px;
+        box-shadow: inset 2px 2px 2px 2px black;
+    }
+    .card-body{
+        border-radius: 10px;
+        background-image: url(child.png);
+        background-position: right;
+        background-size: cover;
+        background-repeat: no-repeat;
+        position: relative;
+        top: 70px;
+        border-radius: 5px;
+        box-shadow: -1px -1px 4px 2px black;
+        height: 250px;
+    }
+    .card-text{
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        font-size: large;
+        margin-top: -50px;
+    }
+    .bg{
+        background-color: rgba(0, 0, 0, 0.516);
+        padding: 10px;
+        border-radius: 5px;
+        color: white;
+        height: 230px;
+    }
+    small{
+        font-size: 80px;
+        font-weight: bolder;
+        color: black;
+        text-shadow: 2px 2px 4px white;
+    }
+    #top{
+        margin-bottom: -50px;
+        margin-top: -30px;
+    }
+    #bottom{
+        margin-left: 340px;
+        margin-top: -50px;
+    }
+    p{
+        margin-top: -30px;
+        margin-bottom: -40px;
+        font-family: 'Courier New', Courier, monospace;
+        font-weight: bolder;
+        font-size: medium;
+    }
+    strong{
+        background-color: darkcyan;
+        display: block;
+        padding: 10px;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        width: 350px;
+        position: relative;
+        left: 15px;
+        bottom: 20px;
+        border-radius: 5px;
+    }
+    h2{
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        margin-bottom: -50px;
+    }
+    .btn{
+        float: right;
+        width: 70px;
+        height: 40px;
+        font-size: large;
+        background-color: green;
+        border: none;
+        padding: 5px;
+        cursor: pointer;
+    }
+</style>
+<body>
+    <div class="card">
+        <h2 class="card-title">
+             Random Quote
+             <button class="btn" onclick="randomQuote()">More</button>
+        </h2>
+        <div class="card-body">
+            <div class="bg">
+                <small id="top">&#8220;</small>
+                <p class="card-text">
+                    
+                </p>
+                <small id="bottom">&#8221;</small>
+            </div>
+            <strong id="author">Ola Emma</strong>
+        </div>
+    </div>
+
+    <script>
+
+        var text = document.querySelector('.card-text');
+        var button = document.querySelector('.btn');
+        var author = document.querySelector('#author')
+
+        function randomQuote () {
+
+            var quote = [
+                'Successful people don’t become that way overnight. What most people see at a glance happiness, wealth, a great career, purpose is the result of hard work and hustle over time...', 
+                'The harder you work for something, the greater you’ll feel when you achieve it....', 
+                'Never judge a book by its cover, unless you open it...', 
+                'Life is like a circle ("What goes around comes aroud")....',
+                'You solve a problem the way you cause the problem...', 
+                'Sometimes we’re tested not to show our weaknesses, but to discover our strengths.'
+                ];
+                var quoteBlock = quote[(Math.floor(Math.random() * quote.length))];
+                text.innerHTML = quoteBlock;
+        }
+        onload = randomQuote();
+    </script>
+</body>
+</html>
